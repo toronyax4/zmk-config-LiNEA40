@@ -346,7 +346,7 @@
 &kp LEFT_GUI       &kp LEFT_ALT  &to MAC_BASE  &none      &lt 4 SPACE  &mac_ime_sym MAC_SYM 0  &lt 2 BACKSPACE  &tog AM_OFF  &none  &kp LEFT_ALT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&mouse_scrl DOWN_ARROW_UP_ARROW>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
     };
 };
