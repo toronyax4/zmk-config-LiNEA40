@@ -107,9 +107,9 @@
         };
 
         AppGestureLayer {
-            bindings = <&mo APP_GESTURE>;
+            bindings = <&tog APP_GESTURE>;
             key-positions = <18 17>;
-            layers = <MAC_BASE WIN_BASE AM_OFF>;
+            layers = <MAC_BASE WIN_BASE AUTOMOUSE AM_OFF APP_GESTURE>;
             timeout-ms = <50>;
         };
 
@@ -297,7 +297,7 @@
         app_gesture {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans          &trans       &trans
-&trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans          &trans       &trans
+&trans  &trans  &trans  &trans  &trans                              &trans  &trans  &kp LG(LS(TAB))  &kp LG(TAB)  &trans
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans          &trans       &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &kp LG(LS(TAB))  &kp LG(TAB)  &trans  &trans  &trans
             >;
