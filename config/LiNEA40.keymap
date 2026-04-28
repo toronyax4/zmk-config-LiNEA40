@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 150
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
@@ -126,6 +126,45 @@
             tap-ms = <20>;
         };
 
+        jis_minus_under: jis_minus_under {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp LS(INT1)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_equal_plus: jis_equal_plus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(MINUS)>, <&kp LS(SEMICOLON)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_semi_colon: jis_semi_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>, <&kp APOS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        nav_minus_under: nav_minus_under {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&mo NAV>, <&jis_minus_under>;
+        };
+
+        rclk_scroll: rclk_scroll {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&mo TB_SCROLL>, <&mkp MB2>;
+        };
+
         bt_mac_0: bt_mac_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -174,7 +213,7 @@
         win_base {
             bindings = <
 &kp Q                &kp W         &kp E         &kp R      &kp T                                   &kp Y              &kp U             &kp I       &kp O      &kp P
-&kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &mt LEFT_SHIFT J   &kp K       &lt 7 L    &lt 5 MINUS
+&kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &mt LEFT_SHIFT J   &kp K       &lt 7 L    &nav_minus_under
 &mt LEFT_SHIFT Z     &kp X         &kp C         &kp V      &kp B                                   &kp N              &mt RIGHT_CONTROL M &kp COMMA   &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp RIGHT_CONTROL    &kp LEFT_ALT  &mo SETTINGS  &none      &lt 4 SPACE  &lt 3 INT5  &lt 3 BACKSPACE  &kp ENTER  &none     &kp LEFT_CONTROL  &kp RIGHT_CONTROL
             >;
@@ -195,8 +234,8 @@
 
         win_symbol {
             bindings = <
-&kp ESC      &kp EXCLAMATION  &trans    &trans    &kp LS(LG(S))                         &kp EQUAL  &kp LS(INT3)   &kp DOUBLE_QUOTES  &kp LS(INT1)     &kp LS(MINUS)
-&kp TAB      &kp LS(N2)       &kp HASH  &kp DOLLAR &trans                               &trans     &kp PERCENT    &kp CARET     &kp LS(EQUAL)    &kp SEMICOLON
+&kp ESC      &kp EXCLAMATION  &trans    &trans    &kp LS(LG(S))                         &kp EQUAL  &kp LS(INT3)   &kp DOUBLE_QUOTES  &kp LS(INT1)     &jis_equal_plus
+&kp TAB      &kp LS(N2)       &kp HASH  &kp DOLLAR &trans                               &trans     &kp PERCENT    &kp CARET     &kp LS(EQUAL)    &jis_semi_colon
 &trans       &trans           &trans    &trans     &trans                               &trans     &trans         &kp LBKT      &kp RIGHT_BRACKET &kp ASTERISK
 &trans       &trans           &trans    &trans    &trans        &trans    &trans         &trans     &trans         &kp BACKSLASH &kp LEFT_PARENTHESIS
             >;
@@ -247,7 +286,7 @@
         automouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                              &kp C_PREV  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
-&trans  &trans  &trans  &trans  &trans                              &trans      &kp LEFT_ARROW  &mkp MB1        &mkp MB2       &kp RIGHT_ARROW
+&trans  &trans  &trans  &trans  &trans                              &trans      &kp LEFT_ARROW  &mkp MB1        &rclk_scroll   &kp RIGHT_ARROW
 &trans  &trans  &trans  &trans  &trans                              &kp C_NEXT  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans      &trans    &trans          &trans
             >;
