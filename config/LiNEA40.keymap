@@ -107,7 +107,7 @@
         };
 
         AppGestureLayer {
-            bindings = <&tog APP_GESTURE>;
+            bindings = <&mo APP_GESTURE>;
             key-positions = <18 17>;
             layers = <MAC_BASE WIN_BASE AUTOMOUSE AM_OFF APP_GESTURE>;
             timeout-ms = <50>;
@@ -297,7 +297,7 @@
         app_gesture {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans          &trans       &trans
-&trans  &trans  &trans  &trans  &trans                              &trans  &trans  &kp LG(LS(TAB))  &kp LG(TAB)  &trans
+&trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans          &trans       &trans
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans          &trans       &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &kp LG(LS(TAB))  &kp LG(TAB)  &trans  &trans  &trans
             >;
@@ -346,7 +346,7 @@
 &kp LEFT_GUI       &kp LEFT_ALT  &to MAC_BASE  &none      &lt 4 SPACE  &mac_ime_sym MAC_SYM 0  &lt 2 BACKSPACE  &tog AM_OFF  &none  &kp LEFT_ALT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW_UP_ARROW>;
         };
     };
 };
