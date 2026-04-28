@@ -216,7 +216,7 @@
 &kp LEFT_GUI       &kp LEFT_ALT  &mo SETTINGS  &none      &lt 4 SPACE  &lt 2 LC(SPACE)  &lt 2 BACKSPACE  &kp ENTER  &none     &kp LEFT_ALT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
 
         win_base {
@@ -227,7 +227,7 @@
 &kp RIGHT_CONTROL    &kp LEFT_ALT  &mo SETTINGS  &none      &lt 4 SPACE  &lt 3 GRAVE  &lt 3 BACKSPACE  &kp ENTER  &none     &kp LEFT_WIN  &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
 
         mac_symbol {
@@ -238,7 +238,7 @@
 &trans       &trans            &trans    &trans    &trans        &trans    &trans          &trans     &trans         &kp RIGHT_BRACKET &kp RIGHT_PARENTHESIS
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
 
         win_symbol {
@@ -249,7 +249,7 @@
 &trans       &trans           &trans    &trans    &trans        &trans    &trans         &trans     &trans         &kp BACKSLASH &kp LEFT_PARENTHESIS
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
 
         num_func {
@@ -260,7 +260,7 @@
 &kp KP_PLUS      &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans       &trans    &kp DEL       &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
 
         nav {
@@ -271,7 +271,7 @@
 &trans         &trans    &trans          &trans         &trans       &trans    &trans       &trans      &trans    &trans         &trans
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
 
         app_gesture {
@@ -282,7 +282,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &kp LG(LS(TAB))  &kp LG(TAB)  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
 
         tb_scroll {
@@ -293,7 +293,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
 
         automouse {
@@ -304,7 +304,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans      &trans    &trans          &trans
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
 
         settings {
@@ -315,7 +315,7 @@
 &trans        &trans             &trans      &trans           &trans       &trans    &trans       &trans     &to AM_OFF  &trans      &bt BT_CLR
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
 
         am_off {
@@ -326,7 +326,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
         };
     };
 };
