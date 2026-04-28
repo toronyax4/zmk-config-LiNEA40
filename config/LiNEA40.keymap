@@ -6,6 +6,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define MAC_BASE 0
@@ -149,20 +150,20 @@
 
         nav_minus_under: nav_minus_under {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-            bindings = <&mo NAV>, <&jis_minus_under>;
+            bindings = <&mo>, <&jis_minus_under>;
         };
 
         rclk_scroll: rclk_scroll {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-            bindings = <&mo TB_SCROLL>, <&mkp MB2>;
+            bindings = <&mo>, <&mkp>;
         };
 
         bt_mac_0: bt_mac_0 {
@@ -213,7 +214,7 @@
         win_base {
             bindings = <
 &kp Q                &kp W         &kp E         &kp R      &kp T                                   &kp Y              &kp U             &kp I       &kp O      &kp P
-&kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &mt LEFT_SHIFT J   &kp K       &lt 7 L    &nav_minus_under
+&kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &mt LEFT_SHIFT J   &kp K       &lt 7 L    &nav_minus_under NAV 0
 &mt LEFT_SHIFT Z     &kp X         &kp C         &kp V      &kp B                                   &kp N              &mt RIGHT_CONTROL M &kp COMMA   &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp RIGHT_CONTROL    &kp LEFT_ALT  &mo SETTINGS  &none      &lt 4 SPACE  &lt 3 INT5  &lt 3 BACKSPACE  &kp ENTER  &none     &kp LEFT_CONTROL  &kp RIGHT_CONTROL
             >;
@@ -248,7 +249,7 @@
 &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                              &trans  &kp F7  &kp F8  &kp F9  &kp F10
 &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans                              &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL                        &trans  &kp F1  &kp F2  &kp F3  &kp F12
-&kp KP_PLUS      &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans       &trans    &kp DEL       &trans  &trans  &trans  &trans
+&kp KP_PLUS      &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans       &trans    &kp DEL       &trans  &trans  &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -286,7 +287,7 @@
         automouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                              &kp C_PREV  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
-&trans  &trans  &trans  &trans  &trans                              &trans      &kp LEFT_ARROW  &mkp MB1        &rclk_scroll   &kp RIGHT_ARROW
+&trans  &trans  &trans  &trans  &trans                              &trans      &kp LEFT_ARROW  &mkp MB1        &rclk_scroll TB_SCROLL MB2   &kp RIGHT_ARROW
 &trans  &trans  &trans  &trans  &trans                              &kp C_NEXT  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans      &trans    &trans          &trans
             >;
