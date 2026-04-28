@@ -62,16 +62,6 @@
             codes = <INPUT_REL_WHEEL>;
             track-remainders;
         };
-
-        tb_app_gestures: tb_app_gestures {
-            compatible = "zmk,input-processor-directional-gestures";
-            #input-processor-cells = <1>;
-            type = <INPUT_EV_REL>;
-            x-code = <INPUT_REL_X>;
-            y-code = <INPUT_REL_Y>;
-            cooldown-ms = <250>;
-            bindings = <&kp LC(UP_ARROW)>, <&kp LC(DOWN_ARROW)>, <&kp LC(RIGHT_ARROW)>, <&kp LC(LEFT_ARROW)>;
-        };
     };
 };
 
@@ -83,11 +73,6 @@
 };
 
 &trackball_listener {
-    app_gestures {
-        layers = <APP_GESTURE>;
-        input-processors = <&tb_app_gestures 80>;
-    };
-
     scroller {
         layers = <TB_SCROLL>;
         input-processors =

@@ -1,8 +1,0 @@
-menu "LiNEA40 custom features"
-
-config ZMK_INPUT_PROCESSOR_DIRECTIONAL_GESTURES
-    bool "Directional gestures input processor"
-    default y
-    depends on ZMK_POINTING
-
-endmenu
