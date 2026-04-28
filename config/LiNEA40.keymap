@@ -130,10 +130,9 @@
         };
 
         mouse_scrl: mouse_wheel_scrl {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
-            tap-ms = <20>;
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         };
 
         jis_minus_under: jis_minus_under {
@@ -217,7 +216,7 @@
 &kp LEFT_GUI       &kp LEFT_ALT  &mo SETTINGS  &none      &lt 4 SPACE  &lt 2 LC(SPACE)  &lt 2 BACKSPACE  &kp ENTER  &none     &kp LEFT_ALT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scrl>;
         };
 
         win_base {
@@ -228,7 +227,7 @@
 &kp RIGHT_CONTROL    &kp LEFT_ALT  &mo SETTINGS  &none      &lt 4 SPACE  &lt 3 GRAVE  &lt 3 BACKSPACE  &kp ENTER  &none     &kp LEFT_WIN  &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scrl>;
         };
 
         mac_symbol {
@@ -239,7 +238,7 @@
 &trans       &trans            &trans    &trans    &trans        &trans    &trans          &trans     &trans         &kp RIGHT_BRACKET &kp RIGHT_PARENTHESIS
             >;
 
-            sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&mouse_scrl>;
         };
 
         win_symbol {
@@ -250,7 +249,7 @@
 &trans       &trans           &trans    &trans    &trans        &trans    &trans         &trans     &trans         &kp BACKSLASH &kp LEFT_PARENTHESIS
             >;
 
-            sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&mouse_scrl>;
         };
 
         num_func {
@@ -261,7 +260,7 @@
 &kp KP_PLUS      &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans       &trans    &kp DEL       &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scrl>;
         };
 
         nav {
@@ -272,7 +271,7 @@
 &trans         &trans    &trans          &trans         &trans       &trans    &trans       &trans      &trans    &trans         &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+            sensor-bindings = <&mouse_scrl>;
         };
 
         app_gesture {
@@ -283,7 +282,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &kp LG(LS(TAB))  &kp LG(TAB)  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scrl>;
         };
 
         tb_scroll {
@@ -294,7 +293,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scrl>;
         };
 
         automouse {
@@ -305,7 +304,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans      &trans    &trans          &trans
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scrl>;
         };
 
         settings {
@@ -316,7 +315,7 @@
 &trans        &trans             &trans      &trans           &trans       &trans    &trans       &trans     &to AM_OFF  &trans      &bt BT_CLR
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+            sensor-bindings = <&mouse_scrl>;
         };
 
         am_off {
@@ -327,7 +326,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scrl>;
         };
     };
 };
