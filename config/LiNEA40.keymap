@@ -54,6 +54,14 @@
             codes = <INPUT_REL_WHEEL>;
             track-remainders;
         };
+
+        tb_scroll_slow: tb_scroll_slow {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_WHEEL>;
+            track-remainders;
+        };
     };
 };
 
@@ -69,7 +77,8 @@
         layers = <TB_SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_to_scroll_mapper>;
+            <&zip_xy_to_scroll_mapper>,
+            <&tb_scroll_slow 1 6>;
     };
 };
 
@@ -216,7 +225,7 @@
 &kp Q                &kp W         &kp E         &kp R      &kp T                                   &kp Y              &kp U             &kp I       &kp O      &kp P
 &kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &mt LEFT_SHIFT J   &kp K       &lt 7 L    &nav_minus_under NAV 0
 &mt LEFT_SHIFT Z     &kp X         &kp C         &kp V      &kp B                                   &kp N              &mt RIGHT_CONTROL M &kp COMMA   &kp DOT    &mt RIGHT_SHIFT SLASH
-&kp RIGHT_CONTROL    &kp LEFT_ALT  &mo SETTINGS  &none      &lt 4 SPACE  &lt 3 INT5  &lt 3 BACKSPACE  &kp ENTER  &none     &kp LEFT_CONTROL  &kp RIGHT_CONTROL
+&kp RIGHT_CONTROL    &kp LEFT_ALT  &mo SETTINGS  &none      &lt 4 SPACE  &lt 3 INT5  &lt 3 BACKSPACE  &kp ENTER  &none     &kp LEFT_WIN  &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -273,6 +282,8 @@
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans          &trans       &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &kp LG(LS(TAB))  &kp LG(TAB)  &trans  &trans
             >;
+
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         tb_scroll {
@@ -282,6 +293,8 @@
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         automouse {
@@ -291,6 +304,8 @@
 &trans  &trans  &trans  &trans  &trans                              &kp C_NEXT  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans      &trans    &trans          &trans
             >;
+
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         settings {
@@ -311,6 +326,8 @@
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
     };
 };
