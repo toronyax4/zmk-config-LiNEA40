@@ -45,6 +45,13 @@
     quick-tap-ms = <150>;
 };
 
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>;
+    require-prior-idle-ms = <125>;
+};
+
 / {
     input_processors {
         zip_wheel_scaler: zip_wheel_scaler {
