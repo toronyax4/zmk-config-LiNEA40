@@ -199,6 +199,16 @@
             bindings = <&mo>, <&mkp>;
         };
 
+        l_layer_tap: l_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
+            bindings = <&mo>, <&kp>;
+        };
+
         app_switch_hold: app_switch_hold {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -308,7 +318,7 @@
         mac_base {
             bindings = <
 &kp Q              &kp W         &kp E         &kp R      &kp T                                      &kp Y              &kp U           &kp I       &kp O      &kp P
-&kp A              &kp S         &kp D         &kp F      &kp G                                      &kp H              &mt LEFT_SHIFT J &kp K       &lt 7 L    &lt 5 MINUS
+&kp A              &kp S         &kp D         &kp F      &kp G                                      &kp H              &mt LEFT_SHIFT J &kp K       &l_layer_tap 7 L    &lt 5 MINUS
 &mt LEFT_SHIFT Z   &kp X         &kp C         &kp V      &kp B                                      &kp N              &mt LEFT_GUI M   &kp COMMA   &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LEFT_GUI       &kp LEFT_ALT  &mo SETTINGS  &none      &lt 4 SPACE  &mac_ime_sym MAC_SYM 0  &lt 2 BACKSPACE  &kp ENTER  &none     &kp LEFT_ALT  &kp LEFT_GUI
             >;
@@ -319,7 +329,7 @@
         win_base {
             bindings = <
 &kp Q                &kp W         &kp E         &kp R      &kp T                                   &kp Y              &kp U             &kp I       &kp O      &kp P
-&kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &mt LEFT_SHIFT J   &kp K       &lt 7 L    &nav_minus_under NAV 0
+&kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &mt LEFT_SHIFT J   &kp K       &l_layer_tap 7 L    &nav_minus_under NAV 0
 &mt LEFT_SHIFT Z     &kp X         &kp C         &kp V      &kp B                                   &kp N              &mt RIGHT_CONTROL M &kp COMMA   &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp RIGHT_CONTROL    &kp LEFT_ALT  &mo SETTINGS  &none      &lt 4 SPACE  &lt 3 GRAVE  &lt 3 BACKSPACE  &kp ENTER  &none     &kp LEFT_WIN  &kp RIGHT_CONTROL
             >;
@@ -418,12 +428,11 @@
         am_off {
             bindings = <
 &kp Q              &kp W         &kp E         &kp R      &kp T                                      &kp Y              &kp U           &kp I       &kp O      &kp P
-&kp A              &kp S         &kp D         &kp F      &kp G                                      &kp H              &mt LEFT_SHIFT J &kp K       &lt 7 L    &lt 5 MINUS
+&kp A              &kp S         &kp D         &kp F      &kp G                                      &kp H              &mt LEFT_SHIFT J &kp K       &l_layer_tap 7 L    &lt 5 MINUS
 &mt LEFT_SHIFT Z   &kp X         &kp C         &kp V      &kp B                                      &kp N              &mt LEFT_GUI M   &kp COMMA   &kp DOT    &mt RIGHT_SHIFT SLASH
 &kp LEFT_GUI       &kp LEFT_ALT  &to MAC_BASE  &none      &lt 4 SPACE  &mac_ime_sym MAC_SYM 0  &lt 2 BACKSPACE  &tog AM_OFF  &none  &kp LEFT_ALT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
-        };
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;        };
     };
 };
