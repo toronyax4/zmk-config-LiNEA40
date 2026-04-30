@@ -362,7 +362,7 @@
         num_func {
             bindings = <
 &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                              &trans  &kp F7  &kp F8  &kp F9  &kp F10
-&kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans                              &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_EQUAL                         &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DEL                             &trans  &kp F1  &kp F2  &kp F3  &kp F12
 &kp KP_PLUS      &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans       &trans    &trans        &trans  &trans  &trans  &trans
             >;
@@ -385,7 +385,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans          &trans       &trans
 &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans          &trans       &trans
-&trans  &trans  &trans  &trans  &kp DEL                             &trans  &trans  &trans          &trans       &trans
+&trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans          &trans       &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &kp LS(TAB)  &kp TAB  &trans  &trans  &trans
             >;
 
