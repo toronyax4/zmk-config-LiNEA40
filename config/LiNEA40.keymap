@@ -269,7 +269,7 @@
             #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <20>;
-            bindings = <&kp LC(SPACE)>, <&kp LC(SPACE)>;
+            bindings = <&kp LC(SPACE)>;
         };
 
         mac_ime_sym: mac_ime_sym {
