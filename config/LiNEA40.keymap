@@ -52,6 +52,9 @@
     require-prior-idle-ms = <125>;
 };
 
+#define LEFT_HAND_KEYS  0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33 34 35
+#define RIGHT_HAND_KEYS 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 36 37 38 39 40
+
 / {
     input_processors {
         zip_wheel_scaler: zip_wheel_scaler {
@@ -202,11 +205,37 @@
         l_layer_tap: l_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            flavor = "balanced";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
             bindings = <&mo>, <&kp>;
+        };
+
+        hm_left: homerow_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+        };
+
+        hm_right: homerow_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
         };
 
         app_switch_hold: app_switch_hold {
@@ -327,8 +356,8 @@
         mac_base {
             bindings = <
 &kp Q              &kp W         &kp E         &kp R      &kp T                                      &kp Y              &kp U           &kp I       &kp O      &kp P
-&kp A              &kp S         &kp D         &kp F      &kp G                                      &kp H              &mt LEFT_SHIFT J &kp K       &l_layer_tap 7 L    &lt 5 MINUS
-&mt LEFT_SHIFT Z   &kp X         &kp C         &kp V      &kp B                                      &kp N              &mt LEFT_GUI M   &kp COMMA   &kp DOT    &mt RIGHT_SHIFT SLASH
+&kp A              &kp S         &kp D         &kp F      &kp G                                      &kp H              &hm_right LEFT_SHIFT J &kp K       &l_layer_tap 7 L    &lt 5 MINUS
+&hm_left LEFT_SHIFT Z   &kp X         &kp C         &kp V      &kp B                                      &kp N              &hm_right LEFT_GUI M   &kp COMMA   &kp DOT    &hm_right RIGHT_SHIFT SLASH
 &kp LEFT_GUI       &kp LEFT_ALT  &none         &none      &lt 4 SPACE  &mac_ime_sym MAC_SYM 0  &lt 2 BACKSPACE  &lt 4 ENTER  &mo SETTINGS  &kp LEFT_ALT  &kp LEFT_GUI
             >;
 
@@ -338,8 +367,8 @@
         win_base {
             bindings = <
 &kp Q                &kp W         &kp E         &kp R      &kp T                                   &kp Y              &kp U             &kp I       &kp O      &kp P
-&kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &mt LEFT_SHIFT J   &kp K       &l_layer_tap 7 L    &nav_minus_under NAV 0
-&mt LEFT_SHIFT Z     &kp X         &kp C         &kp V      &kp B                                   &kp N              &mt RIGHT_CONTROL M &kp COMMA   &kp DOT    &mt RIGHT_SHIFT SLASH
+&kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &hm_right LEFT_SHIFT J   &kp K       &l_layer_tap 7 L    &nav_minus_under NAV 0
+&hm_left LEFT_SHIFT Z     &kp X         &kp C         &kp V      &kp B                                   &kp N              &hm_right RIGHT_CONTROL M &kp COMMA   &kp DOT    &hm_right RIGHT_SHIFT SLASH
 &kp RIGHT_CONTROL    &kp LEFT_ALT  &none         &none      &lt 4 SPACE  &win_ime_sym WIN_SYM GRAVE  &lt 3 BACKSPACE  &lt 4 ENTER  &mo SETTINGS  &kp LEFT_WIN  &kp RIGHT_CONTROL
             >;
 
@@ -437,8 +466,8 @@
         am_off {
             bindings = <
 &kp Q              &kp W         &kp E         &kp R      &kp T                                      &kp Y              &kp U           &kp I       &kp O      &kp P
-&kp A              &kp S         &kp D         &kp F      &kp G                                      &kp H              &mt LEFT_SHIFT J &kp K       &l_layer_tap 7 L    &lt 5 MINUS
-&mt LEFT_SHIFT Z   &kp X         &kp C         &kp V      &kp B                                      &kp N              &mt LEFT_GUI M   &kp COMMA   &kp DOT    &mt RIGHT_SHIFT SLASH
+&kp A              &kp S         &kp D         &kp F      &kp G                                      &kp H              &hm_right LEFT_SHIFT J &kp K       &l_layer_tap 7 L    &lt 5 MINUS
+&hm_left LEFT_SHIFT Z   &kp X         &kp C         &kp V      &kp B                                      &kp N              &hm_right LEFT_GUI M   &kp COMMA   &kp DOT    &hm_right RIGHT_SHIFT SLASH
 &kp LEFT_GUI       &kp LEFT_ALT  &to MAC_BASE  &none      &lt 4 SPACE  &mac_ime_sym MAC_SYM 0  &lt 2 BACKSPACE  &tog AM_OFF  &none  &kp LEFT_ALT  &kp LEFT_GUI
             >;
 
