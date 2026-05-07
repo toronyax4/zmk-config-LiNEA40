@@ -22,7 +22,6 @@
 #define AM_OFF 10
 #define WIN_NUM_FUNC 11
 #define WIN_NAV 12
-#define WIN_AUTOMOUSE 13
 
 //mouse cursor
 
@@ -111,15 +110,6 @@
 };
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        win_automouse {
-            if-layers = <WIN_BASE AUTOMOUSE>;
-            then-layer = <WIN_AUTOMOUSE>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -455,9 +445,9 @@
 
         automouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                              &kp LG(LBKT)  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
+&trans  &trans  &trans  &trans  &trans                              &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
 &trans  &trans  &trans  &trans  &trans                              &trans      &kp LEFT_ARROW  &mkp MB1        &rclk_scroll TB_SCROLL MB2   &kp RIGHT_ARROW
-&trans  &trans  &trans  &trans  &kp DEL                             &kp LG(RBKT)  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
+&trans  &trans  &trans  &trans  &kp DEL                             &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans      &trans    &trans          &trans
             >;
 
@@ -481,17 +471,6 @@
 &kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &trans                    &trans    &trans    &mkp MB1        &mkp MB2       &trans
 &trans            &kp END         &trans          &kp PAGE_DOWN   &kp DEL                   &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans            &trans         &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
-            >;
-
-            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
-        };
-
-        win_automouse {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                              &mkp MB4  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                              &trans    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                              &mkp MB5  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans    &trans  &trans  &trans
             >;
 
             sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
