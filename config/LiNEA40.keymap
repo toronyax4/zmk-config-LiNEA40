@@ -20,6 +20,9 @@
 #define AUTOMOUSE 8
 #define SETTINGS 9
 #define AM_OFF 10
+#define WIN_NUM_FUNC 11
+#define WIN_NAV 12
+#define WIN_AUTOMOUSE 13
 
 //mouse cursor
 
@@ -87,7 +90,7 @@
 
 &msc_input_listener {
     speed_up {
-        layers = <NUM_FUNC>;
+        layers = <NUM_FUNC WIN_NUM_FUNC>;
         input-processors = <&zip_wheel_scaler 3 1>;
     };
 };
@@ -108,6 +111,15 @@
 };
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        win_automouse {
+            if-layers = <WIN_BASE AUTOMOUSE>;
+            then-layer = <WIN_AUTOMOUSE>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -367,9 +379,9 @@
         win_base {
             bindings = <
 &kp Q                &kp W         &kp E         &kp R      &kp T                                   &kp Y              &kp U             &kp I       &kp O      &kp P
-&kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &hm_right LEFT_SHIFT J   &kp K       &l_layer_tap 7 L    &nav_minus_under NAV 0
+&kp A                &kp S         &kp D         &kp F      &kp G                                   &kp H              &hm_right LEFT_SHIFT J   &kp K       &l_layer_tap 7 L    &nav_minus_under WIN_NAV 0
 &hm_left LEFT_SHIFT Z     &kp X         &kp C         &kp V      &kp B                                   &kp N              &hm_right RIGHT_CONTROL M &kp COMMA   &kp DOT    &hm_right RIGHT_SHIFT SLASH
-&kp RIGHT_CONTROL    &kp LEFT_ALT  &none         &none      &lt 4 SPACE  &win_ime_sym WIN_SYM GRAVE  &lt 3 BACKSPACE  &lt 4 ENTER  &mo SETTINGS  &kp LEFT_WIN  &kp RIGHT_CONTROL
+&kp RIGHT_CONTROL    &kp LEFT_ALT  &none         &none      &lt WIN_NUM_FUNC SPACE  &win_ime_sym WIN_SYM GRAVE  &lt 3 BACKSPACE  &lt WIN_NUM_FUNC ENTER  &mo SETTINGS  &kp LEFT_WIN  &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
@@ -400,7 +412,7 @@
         num_func {
             bindings = <
 &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                              &trans  &kp F7  &kp F8  &kp F9  &kp F10
-&kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &jis_equal_plus                      &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_EQUAL                         &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DEL                             &trans  &kp F1  &kp F2  &kp F3  &kp F12
 &kp KP_PLUS      &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans       &trans    &trans        &trans  &trans  &trans  &trans
             >;
@@ -410,9 +422,9 @@
 
         nav {
             bindings = <
-&kp LC(KP_PLUS)   &kp HOME        &kp UP_ARROW    &kp PAGE_UP     &trans                    &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
-&kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &trans                    &trans    &trans    &mkp MB1        &mkp MB2       &trans
-&trans            &kp END         &trans          &kp PAGE_DOWN   &kp DEL                   &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
+&kp LG(EQUAL)  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans                             &kp LG(LBKT)  &kp HOME  &kp UP_ARROW  &kp PAGE_UP    &trans
+&kp LG(MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                     &trans      &trans    &mkp MB1      &mkp MB2       &trans
+&trans         &kp END   &trans          &kp PAGE_DOWN  &kp DEL                            &kp LG(RBKT)  &kp END   &kp DOWN_ARROW &kp PAGE_DOWN  &trans
 &trans         &trans    &trans          &trans         &trans       &trans    &trans       &trans      &trans    &trans         &trans
             >;
 
@@ -447,6 +459,39 @@
 &trans  &trans  &trans  &trans  &trans                              &trans      &kp LEFT_ARROW  &mkp MB1        &rclk_scroll TB_SCROLL MB2   &kp RIGHT_ARROW
 &trans  &trans  &trans  &trans  &kp DEL                             &kp LG(RBKT)  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans      &trans    &trans          &trans
+            >;
+
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
+        };
+
+        win_num_func {
+            bindings = <
+&kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                              &trans  &kp F7  &kp F8  &kp F9  &kp F10
+&kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &jis_equal_plus                      &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DEL                             &trans  &kp F1  &kp F2  &kp F3  &kp F12
+&kp KP_PLUS      &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans       &trans    &trans        &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
+        };
+
+        win_nav {
+            bindings = <
+&kp LC(KP_PLUS)   &kp HOME        &kp UP_ARROW    &kp PAGE_UP     &trans                    &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
+&kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &trans                    &trans    &trans    &mkp MB1        &mkp MB2       &trans
+&trans            &kp END         &trans          &kp PAGE_DOWN   &kp DEL                   &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
+&trans            &trans         &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
+            >;
+
+            sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
+        };
+
+        win_automouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                              &mkp MB4  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                              &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                              &mkp MB5  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans    &trans  &trans  &trans
             >;
 
             sensor-bindings = <&mouse_scrl DOWN_ARROW UP_ARROW>;
