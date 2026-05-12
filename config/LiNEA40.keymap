@@ -389,10 +389,10 @@
 
         mac_symbol {
             bindings = <
-&kp ESC      &kp EXCLAMATION  &trans    &trans    &kp LS(LG(N4))                        &kp CARET  &kp PIPE       &kp ASTERISK  &kp UNDER         &kp EQUAL
+&kp ESC      &kp EXCLAMATION  &trans    &trans    &kp LS(LG(N4))                        &trans     &kp PIPE       &kp ASTERISK  &kp UNDER         &kp EQUAL
 &kp TAB      &kp DOUBLE_QUOTES &kp HASH  &kp DOLLAR &trans                                &trans     &kp PERCENT    &kp AMPERSAND  &kp TILDE         &kp SEMICOLON
-&trans       &trans            &trans    &trans     &kp DEL                               &trans     &trans         &kp AT        &kp LBKT          &kp LEFT_PARENTHESIS
-&trans       &trans            &trans    &trans    &trans        &trans    &kp DEL         &trans     &trans         &kp RIGHT_BRACKET &kp RIGHT_PARENTHESIS
+&trans       &trans            &trans    &trans     &kp DEL                               &trans     &trans         &kp AT        &kp CARET         &trans
+&trans       &trans            &trans    &trans    &trans        &trans    &kp DEL         &trans     &kp LBKT        &kp RIGHT_BRACKET &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -400,10 +400,10 @@
 
         win_symbol {
             bindings = <
-&kp ESC      &kp EXCLAMATION  &trans    &trans    &kp LS(LG(S))                         &kp EQUAL  &kp LS(INT3)   &kp DOUBLE_QUOTES  &kp LS(INT1)     &jis_equal_plus
+&kp ESC      &kp EXCLAMATION  &trans    &trans    &kp LS(LG(S))                         &trans     &kp LS(INT3)   &kp DOUBLE_QUOTES  &kp LS(INT1)     &jis_equal_plus
 &kp TAB      &kp LS(N2)       &kp HASH  &kp DOLLAR &trans                               &trans     &kp PERCENT    &kp CARET     &kp LS(EQUAL)    &jis_semi_colon
-&trans       &trans           &trans    &trans     &kp DEL                              &trans     &trans         &kp LBKT      &kp RIGHT_BRACKET &kp ASTERISK
-&trans       &trans           &trans    &trans    &trans        &trans    &kp DEL        &trans     &trans         &kp BACKSLASH &kp LEFT_PARENTHESIS
+&trans       &trans           &trans    &trans     &kp DEL                              &trans     &trans         &kp LBKT      &kp EQUAL         &trans
+&trans       &trans           &trans    &trans    &trans        &trans    &kp DEL        &trans     &kp RIGHT_BRACKET &kp BACKSLASH &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
