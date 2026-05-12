@@ -391,7 +391,7 @@
             bindings = <
 &kp ESC      &kp EXCLAMATION  &trans    &trans    &kp LS(LG(N4))                        &trans     &kp PIPE       &kp ASTERISK  &kp UNDER         &kp EQUAL
 &kp TAB      &kp DOUBLE_QUOTES &kp HASH  &kp DOLLAR &trans                                &trans     &kp PERCENT    &kp AMPERSAND  &kp TILDE         &kp SEMICOLON
-&trans       &trans            &trans    &trans     &kp DEL                               &trans     &trans         &kp AT        &kp CARET         &trans
+&trans       &trans            &trans    &trans     &trans                                &trans     &trans         &kp AT        &kp CARET         &trans
 &trans       &trans            &trans    &trans    &trans        &trans    &kp DEL         &trans     &kp LBKT        &kp RIGHT_BRACKET &trans
             >;
 
@@ -402,7 +402,7 @@
             bindings = <
 &kp ESC      &kp EXCLAMATION  &trans    &trans    &kp LS(LG(S))                         &trans     &kp LS(INT3)   &kp DOUBLE_QUOTES  &kp LS(INT1)     &jis_equal_plus
 &kp TAB      &kp LS(N2)       &kp HASH  &kp DOLLAR &trans                               &trans     &kp PERCENT    &kp CARET     &kp LS(EQUAL)    &jis_semi_colon
-&trans       &trans           &trans    &trans     &kp DEL                              &trans     &trans         &kp LBKT      &kp EQUAL         &trans
+&trans       &trans           &trans    &trans     &trans                               &trans     &trans         &kp LBKT      &kp EQUAL         &trans
 &trans       &trans           &trans    &trans    &trans        &trans    &kp DEL        &trans     &kp RIGHT_BRACKET &kp BACKSLASH &trans
             >;
 
@@ -413,7 +413,7 @@
             bindings = <
 &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                              &trans  &kp F7  &kp F8  &kp F9  &kp F10
 &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp EQUAL                           &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DEL                             &trans  &kp F1  &kp F2  &kp F3  &kp F12
+&kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans                              &trans  &kp F1  &kp F2  &kp F3  &kp F12
 &kp KP_PLUS      &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans       &trans    &trans        &trans  &trans  &trans  &trans
             >;
 
@@ -424,7 +424,7 @@
             bindings = <
 &kp LG(EQUAL)   &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans                         &mkp MB4     &kp HOME  &kp UP_ARROW  &kp PAGE_UP    &trans
 &kp LG(MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                 &trans       &trans    &mkp MB1      &mkp MB2       &trans
-&trans             &kp END   &trans          &kp PAGE_DOWN  &kp DEL                        &mkp MB5     &kp END   &kp DOWN_ARROW &kp PAGE_DOWN  &trans
+&trans             &kp END   &trans          &kp PAGE_DOWN  &trans                         &mkp MB5     &kp END   &kp DOWN_ARROW &kp PAGE_DOWN  &trans
 &trans         &trans    &trans          &trans         &trans       &trans    &trans       &trans      &trans    &trans         &trans
             >;
 
@@ -457,7 +457,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                              &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
 &trans  &trans  &trans  &trans  &trans                              &trans      &kp LEFT_ARROW  &mkp MB1        &rclk_scroll TB_SCROLL MB2   &kp RIGHT_ARROW
-&trans  &trans  &trans  &trans  &kp DEL                             &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
+&trans  &trans  &trans  &trans  &trans                              &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans      &trans    &trans          &trans
             >;
 
