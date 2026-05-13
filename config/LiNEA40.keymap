@@ -458,7 +458,7 @@
 &trans  &trans  &trans  &trans  &trans                              &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
 &trans  &trans  &trans  &trans  &trans                              &trans      &kp LEFT_ARROW  &mkp MB1        &rclk_scroll TB_SCROLL MB2   &kp RIGHT_ARROW
 &trans  &trans  &trans  &trans  &trans                              &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
-&trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans      &trans    &trans          &trans
+&trans  &trans  &trans  &trans  &trans       &trans    &trans       &tog AM_OFF &trans    &trans          &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
