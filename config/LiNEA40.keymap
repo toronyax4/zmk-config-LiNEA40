@@ -499,10 +499,10 @@
 
         win_nav {
             bindings = <
-&kp LC(KP_PLUS)   &kp HOME        &kp UP_ARROW    &kp PAGE_UP     &trans                    &mkp MB4  &kp HOME  &kp UP_ARROW    &trans
-&trans            &trans    &mkp MB1        &mkp MB2       &trans
-&trans            &kp END   &kp DOWN_ARROW &kp PAGE_DOWN  &trans  &mkp MB5 &kp END  &kp DOWN_ARROW &kp PAGE_DOWN  &trans
-&trans            &trans    &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
+&kp LC(KP_PLUS)   &kp HOME        &kp UP_ARROW    &kp PAGE_UP     &trans                    &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
+&kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &trans                    &trans    &trans    &mkp MB1        &mkp MB2       &trans
+&trans            &kp END         &trans          &kp PAGE_DOWN   &kp DEL                   &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
+&trans            &trans         &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
