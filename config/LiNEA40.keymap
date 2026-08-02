@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10
 
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
@@ -35,9 +35,9 @@
 //mouse scroll
 
 &msc {
-    delay-ms = <3>;
-    trigger-period-ms = <3>;
-    time-to-max-speed-ms = <100>;
+    delay-ms = <0>;
+    trigger-period-ms = <16>;
+    time-to-max-speed-ms = <0>;
     acceleration-exponent = <0>;
 };
 
@@ -163,7 +163,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <20>;
+            tap-ms = <5>;
         };
 
         jis_minus_under: jis_minus_under {
