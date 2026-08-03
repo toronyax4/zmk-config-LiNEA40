@@ -1,0 +1,1 @@
+target_sources(app PRIVATE src/input_processors/input_processor_directional_gestures.c)
