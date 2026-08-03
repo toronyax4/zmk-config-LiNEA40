@@ -379,7 +379,7 @@
 &bottom_mod_tap LEFT_GUI TAB  &kp LEFT_ALT  &kp ESC      &none      &lt 4 SPACE  &mac_ime_sym MAC_SYM 0  &lt 2 BACKSPACE  &lt 4 ENTER  &lt SETTINGS LEFT_PARENTHESIS  &bottom_mod_tap LEFT_ALT RIGHT_PARENTHESIS  &bottom_mod_tap LEFT_GUI DEL
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         win_base {
@@ -390,7 +390,7 @@
 &bottom_mod_tap RIGHT_CONTROL TAB  &kp LEFT_ALT  &kp ESC      &none      &lt WIN_NUM_FUNC SPACE  &win_ime_sym WIN_SYM GRAVE  &lt 3 BACKSPACE  &lt WIN_NUM_FUNC ENTER  &lt SETTINGS ASTERISK  &bottom_mod_tap LEFT_WIN LEFT_PARENTHESIS  &bottom_mod_tap RIGHT_CONTROL DEL
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         mac_symbol {
@@ -401,7 +401,7 @@
 &trans       &trans            &trans    &trans    &trans        &trans    &kp DEL         &trans     &kp LBKT        &kp RIGHT_BRACKET &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         win_symbol {
@@ -412,7 +412,7 @@
 &trans       &trans           &trans    &trans    &trans        &trans    &kp DEL        &trans     &kp RIGHT_BRACKET &kp BACKSLASH &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         num_func {
@@ -423,7 +423,7 @@
 &kp KP_PLUS      &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans       &trans    &trans        &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         nav {
@@ -434,7 +434,7 @@
 &trans         &trans    &trans          &trans         &trans       &trans    &trans       &trans      &trans    &trans         &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         app_gesture {
@@ -445,7 +445,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &kp LS(TAB)  &kp TAB  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         tb_scroll {
@@ -456,7 +456,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         automouse {
@@ -467,7 +467,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &tog AUTOMOUSE &trans    &trans          &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         settings {
@@ -478,7 +478,7 @@
 &trans        &trans             &trans      &trans           &trans       &trans    &trans       &tog AM_OFF  &trans     &trans      &bt BT_CLR
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         am_off {
@@ -489,7 +489,7 @@
 &kp LEFT_GUI       &kp LEFT_ALT  &to MAC_BASE  &none      &lt 4 SPACE  &mac_ime_sym MAC_SYM 0  &lt 2 BACKSPACE  &tog AM_OFF  &none  &kp LEFT_ALT  &kp LEFT_GUI
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         win_num_func {
@@ -500,7 +500,7 @@
 &kp KP_PLUS      &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans       &trans    &trans        &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
 
         win_nav {
@@ -511,7 +511,7 @@
 &trans            &trans         &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_DOWN MOVE_UP>;
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
         };
     };
 };
