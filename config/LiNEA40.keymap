@@ -167,6 +167,7 @@
             direction-confirm-ms = <300>;
             slow-interval-ms = <25>;
             fast-interval-ms = <25>;
+            fast-trigger-count = <12>;
             slow-scale-percent = <11>;
             fast-scale-percent = <50>;
         };
