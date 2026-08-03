@@ -164,6 +164,7 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
             tap-ms = <50>;
+            direction-confirm-ms = <75>;
             slow-interval-ms = <60>;
             fast-interval-ms = <25>;
             slow-scale-percent = <4>;
