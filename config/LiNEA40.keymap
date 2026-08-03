@@ -163,11 +163,11 @@
             compatible = "zmk,behavior-sensor-rotate-accel";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <50>;
+            tap-ms = <20>;
             direction-confirm-ms = <300>;
             slow-interval-ms = <25>;
             fast-interval-ms = <25>;
-            slow-scale-percent = <1>;
+            slow-scale-percent = <11>;
             fast-scale-percent = <50>;
         };
 
