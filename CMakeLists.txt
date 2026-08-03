@@ -1,4 +1,1 @@
-zephyr_library()
-zephyr_library_sources_ifdef(CONFIG_ZMK_INPUT_PROCESSOR_DIRECTIONAL_GESTURES
-  src/input_processor_directional_gestures.c
-)
+target_sources(app PRIVATE src/behaviors/behavior_sensor_rotate_accel.c)

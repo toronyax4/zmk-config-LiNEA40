@@ -1,0 +1,31 @@
+description: Rotation-rate-sensitive sensor behavior
+
+compatible: "zmk,behavior-sensor-rotate-accel"
+
+properties:
+  "#sensor-binding-cells":
+    type: int
+    required: true
+    const: 2
+  bindings:
+    type: phandles
+    required: true
+  tap-ms:
+    type: int
+    default: 20
+  slow-interval-ms:
+    type: int
+    default: 120
+  fast-interval-ms:
+    type: int
+    default: 25
+  slow-scale-percent:
+    type: int
+    default: 21
+  fast-scale-percent:
+    type: int
+    default: 50
+
+sensor-binding-cells:
+  - param1
+  - param2

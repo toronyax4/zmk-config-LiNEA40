@@ -1,5 +1,5 @@
+name: zmk-behavior-encoder-scroll-accel
 build:
   cmake: .
-  kconfig: Kconfig
   settings:
     dts_root: .
