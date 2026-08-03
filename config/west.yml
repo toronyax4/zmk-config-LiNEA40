@@ -13,6 +13,7 @@ manifest:
   projects:
     - name: zmk
       remote: linea40
+      repo-path: zmk-LiNEA40
       revision: linea40-encoder-scroll
       import: app/west.yml
     - name: zmk-pmw3610-driver
