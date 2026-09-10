@@ -429,9 +429,9 @@
 
         mac_symbol {
             bindings = <
-&kp ESC      &kp EXCLAMATION  &trans    &trans    &kp LS(LG(N4))                        &trans     &kp PIPE       &kp ASTERISK  &kp UNDER         &kp EQUAL
-&kp TAB      &kp DOUBLE_QUOTES &kp HASH  &kp DOLLAR &trans                                &trans     &kp PERCENT    &kp AMPERSAND  &kp TILDE         &kp SEMICOLON
-&trans       &trans            &trans    &trans     &trans                                &trans     &trans         &kp AT        &kp CARET         &trans
+&none        &none            &trans    &trans    &kp LS(LG(N4))                        &trans     &kp PIPE       &kp ASTERISK  &kp UNDER         &kp EQUAL
+&kp AT       &kp DOLLAR        &kp HASH  &kp EXCLAMATION &trans                                &trans     &kp PERCENT    &kp AMPERSAND  &kp TILDE         &kp SEMICOLON
+&trans       &trans            &trans    &trans     &trans                                &trans     &trans         &kp DOUBLE_QUOTES &kp CARET         &trans
 &trans       &trans            &trans    &trans    &trans        &trans    &kp DEL         &trans     &kp LBKT        &kp RIGHT_BRACKET &trans
             >;
 
@@ -440,9 +440,9 @@
 
         win_symbol {
             bindings = <
-&kp ESC      &kp EXCLAMATION  &trans    &trans    &kp LS(LG(S))                         &trans     &kp LS(INT3)   &kp DOUBLE_QUOTES  &kp LS(INT1)     &jis_equal_plus
-&kp TAB      &kp LS(N2)       &kp HASH  &kp DOLLAR &trans                               &trans     &kp PERCENT    &kp CARET     &kp LS(EQUAL)    &jis_semi_colon
-&trans       &trans           &trans    &trans     &trans                               &trans     &trans         &kp LBKT      &kp EQUAL         &trans
+&none        &none            &trans    &trans    &kp LS(LG(S))                         &trans     &kp LS(INT3)   &kp DOUBLE_QUOTES  &kp LS(INT1)     &jis_equal_plus
+&kp LBKT     &kp DOLLAR       &kp HASH  &kp EXCLAMATION &trans                               &trans     &kp PERCENT    &kp CARET     &kp LS(EQUAL)    &jis_semi_colon
+&trans       &trans           &trans    &trans     &trans                               &trans     &trans         &kp LS(N2)    &kp EQUAL         &trans
 &trans       &trans           &trans    &trans    &trans        &trans    &kp DEL        &trans     &kp RIGHT_BRACKET &kp BACKSLASH &trans
             >;
 
