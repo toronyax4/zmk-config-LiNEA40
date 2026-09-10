@@ -107,7 +107,7 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
-            <&tb_scroll_slow 3 8>;
+            <&tb_scroll_slow 3 16>;
     };
 
     cursor_movement {
