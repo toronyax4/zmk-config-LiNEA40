@@ -107,7 +107,7 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
-            <&tb_scroll_slow 1 22>;
+            <&tb_scroll_slow 1 8>;
     };
 
     cursor_movement {
@@ -463,7 +463,7 @@
         nav {
             bindings = <
 &kp LG(EQUAL)   &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans                         &mkp MB4     &kp HOME  &kp UP_ARROW  &kp PAGE_UP    &trans
-&kp LG(MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                 &trans       &trans    &mkp MB1      &mkp MB2       &trans
+&kp LG(MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                 &trans       &trans    &mkp MB1      &rclk_scroll TB_SCROLL MB2       &trans
 &trans             &kp END   &trans          &kp PAGE_DOWN  &trans                         &mkp MB5     &kp END   &kp DOWN_ARROW &kp PAGE_DOWN  &trans
 &trans         &trans    &trans          &trans         &trans       &trans    &trans       &trans      &trans    &trans         &trans
             >;
@@ -540,7 +540,7 @@
         win_nav {
             bindings = <
 &kp LC(KP_PLUS)   &kp HOME        &kp UP_ARROW    &kp PAGE_UP     &trans                    &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
-&kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &trans                    &trans    &trans    &mkp MB1        &mkp MB2       &trans
+&kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &trans                    &trans    &trans    &mkp MB1        &rclk_scroll TB_SCROLL MB2       &trans
 &trans            &kp END         &trans          &kp PAGE_DOWN   &kp DEL                   &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans            &trans         &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
             >;
