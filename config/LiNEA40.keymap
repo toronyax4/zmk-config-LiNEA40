@@ -150,6 +150,34 @@
             key-positions = <26 27>;
         };
 
+        EscapeBaseCombo {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+            layers = <MAC_BASE WIN_BASE>;
+            timeout-ms = <50>;
+        };
+
+        TabBaseCombo {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+            layers = <MAC_BASE WIN_BASE>;
+            timeout-ms = <50>;
+        };
+
+        ReturnBaseCombo {
+            bindings = <&kp ENTER>;
+            key-positions = <18 19>;
+            layers = <MAC_BASE WIN_BASE>;
+            timeout-ms = <50>;
+        };
+
+        BackspaceBaseCombo {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+            layers = <MAC_BASE WIN_BASE>;
+            timeout-ms = <50>;
+        };
+
     };
 
     behaviors {
