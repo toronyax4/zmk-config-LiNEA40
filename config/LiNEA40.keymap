@@ -95,6 +95,8 @@
 };
 
 &trackball_listener {
+    input-processors = <&zip_xy_scaler 0 1>;
+
     app_gestures {
         layers = <APP_GESTURE>;
         input-processors = <&tb_app_gestures 80>;
@@ -106,6 +108,10 @@
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
             <&tb_scroll_slow 1 22>;
+    };
+
+    cursor_movement {
+        layers = <NAV WIN_NAV>;
     };
 };
 
