@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 9
 
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
@@ -202,8 +202,8 @@
             slow-interval-ms = <25>;
             fast-interval-ms = <25>;
             fast-trigger-count = <12>;
-            slow-scale-percent = <10>;
-            fast-scale-percent = <45>;
+            slow-scale-percent = <12>;
+            fast-scale-percent = <50>;
         };
 
         jis_minus_under: jis_minus_under {
