@@ -345,6 +345,49 @@
                 , <&macro_press &kp LEFT_GUI>;
         };
 
+        mac_window_left: mac_window_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_press &kp LEFT_CONTROL &kp GLOBE>
+                , <&macro_tap &kp LEFT_ARROW>
+                , <&macro_release &kp GLOBE &kp LEFT_CONTROL>;
+        };
+
+        mac_window_right: mac_window_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_press &kp LEFT_CONTROL &kp GLOBE>
+                , <&macro_tap &kp RIGHT_ARROW>
+                , <&macro_release &kp GLOBE &kp LEFT_CONTROL>;
+        };
+
+        mac_window_fill: mac_window_fill {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_press &kp LEFT_CONTROL &kp GLOBE>
+                , <&macro_tap &kp F>
+                , <&macro_release &kp GLOBE &kp LEFT_CONTROL>;
+        };
+
+        win_window_minimize: win_window_minimize {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap &kp LA(SPACE)>
+                , <&macro_tap &kp N>;
+        };
+
         mac_ime_toggle: mac_ime_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -462,9 +505,9 @@
 
         nav {
             bindings = <
-&kp LG(EQUAL)   &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans                         &mkp MB4     &kp HOME  &kp UP_ARROW  &kp PAGE_UP    &trans
-&kp LG(MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                 &trans       &trans    &mkp MB1      &rclk_scroll TB_SCROLL MB2       &trans
-&trans             &kp END   &trans          &kp PAGE_DOWN  &trans                         &mkp MB5     &kp END   &kp DOWN_ARROW &kp PAGE_DOWN  &trans
+&kp LG(EQUAL)   &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &mac_window_fill                         &mkp MB4     &kp HOME  &kp UP_ARROW  &kp PAGE_UP    &trans
+&kp LG(MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mac_window_left       &mac_window_right       &trans    &mkp MB1      &rclk_scroll TB_SCROLL MB2       &trans
+&trans             &kp END   &trans          &kp PAGE_DOWN  &kp LG(M)                         &mkp MB5     &kp END   &kp DOWN_ARROW &kp PAGE_DOWN  &trans
 &trans         &trans    &trans          &trans         &trans       &trans    &trans       &trans      &trans    &trans         &trans
             >;
 
@@ -539,9 +582,9 @@
 
         win_nav {
             bindings = <
-&kp LC(KP_PLUS)   &kp HOME        &kp UP_ARROW    &kp PAGE_UP     &trans                    &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
-&kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &trans                    &trans    &trans    &mkp MB1        &rclk_scroll TB_SCROLL MB2       &trans
-&trans            &kp END         &trans          &kp PAGE_DOWN   &kp DEL                   &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
+&kp LC(KP_PLUS)   &kp HOME        &kp UP_ARROW    &kp PAGE_UP     &kp LG(UP_ARROW)                    &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
+&kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &kp LG(LEFT_ARROW)        &kp LG(RIGHT_ARROW)    &trans    &mkp MB1        &rclk_scroll TB_SCROLL MB2       &trans
+&trans            &kp END         &trans          &kp PAGE_DOWN   &win_window_minimize                   &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans            &trans         &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
             >;
 
