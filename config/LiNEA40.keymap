@@ -351,9 +351,9 @@
             wait-ms = <10>;
             tap-ms = <20>;
             bindings
-                = <&macro_press &kp LEFT_CONTROL &kp GLOBE>
+                = <&macro_press &kp LEFT_CONTROL &kp CAPS>
                 , <&macro_tap &kp LEFT_ARROW>
-                , <&macro_release &kp GLOBE &kp LEFT_CONTROL>;
+                , <&macro_release &kp CAPS &kp LEFT_CONTROL>;
         };
 
         mac_window_right: mac_window_right {
@@ -362,9 +362,9 @@
             wait-ms = <10>;
             tap-ms = <20>;
             bindings
-                = <&macro_press &kp LEFT_CONTROL &kp GLOBE>
+                = <&macro_press &kp LEFT_CONTROL &kp CAPS>
                 , <&macro_tap &kp RIGHT_ARROW>
-                , <&macro_release &kp GLOBE &kp LEFT_CONTROL>;
+                , <&macro_release &kp CAPS &kp LEFT_CONTROL>;
         };
 
         mac_window_fill: mac_window_fill {
@@ -373,9 +373,9 @@
             wait-ms = <10>;
             tap-ms = <20>;
             bindings
-                = <&macro_press &kp LEFT_CONTROL &kp GLOBE>
+                = <&macro_press &kp LEFT_CONTROL &kp CAPS>
                 , <&macro_tap &kp F>
-                , <&macro_release &kp GLOBE &kp LEFT_CONTROL>;
+                , <&macro_release &kp CAPS &kp LEFT_CONTROL>;
         };
 
         win_window_minimize: win_window_minimize {
