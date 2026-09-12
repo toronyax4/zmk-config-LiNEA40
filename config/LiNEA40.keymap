@@ -430,7 +430,7 @@
         mac_symbol {
             bindings = <
 &none        &none            &trans    &trans    &kp LS(LG(N4))                        &trans     &kp PIPE       &kp ASTERISK  &kp UNDER         &kp EQUAL
-&kp AT       &kp DOLLAR        &kp HASH  &kp EXCLAMATION &trans                                &trans     &kp PERCENT    &kp AMPERSAND  &kp TILDE         &kp SEMICOLON
+&kp AT       &kp DOLLAR        &kp HASH  &kp EXCLAMATION &trans                                &trans     &kp PERCENT    &kp AMPERSAND  &kp SEMICOLON         &kp TILDE
 &trans       &trans            &trans    &trans     &trans                                &trans     &trans         &kp DOUBLE_QUOTES &kp CARET         &trans
 &trans       &trans            &trans    &trans    &trans        &trans    &kp DEL         &trans     &kp LBKT        &kp RIGHT_BRACKET &trans
             >;
@@ -441,7 +441,7 @@
         win_symbol {
             bindings = <
 &none        &none            &trans    &trans    &kp LS(LG(S))                         &trans     &kp LS(INT3)   &kp DOUBLE_QUOTES  &kp LS(INT1)     &jis_equal_plus
-&kp LBKT     &kp DOLLAR       &kp HASH  &kp EXCLAMATION &trans                               &trans     &kp PERCENT    &kp CARET     &kp LS(EQUAL)    &jis_semi_colon
+&kp LBKT     &kp DOLLAR       &kp HASH  &kp EXCLAMATION &trans                               &trans     &kp PERCENT    &kp CARET     &jis_semi_colon    &kp LS(EQUAL)
 &trans       &trans           &trans    &trans     &trans                               &trans     &trans         &kp LS(N2)    &kp EQUAL         &trans
 &trans       &trans           &trans    &trans    &trans        &trans    &kp DEL        &trans     &kp RIGHT_BRACKET &kp BACKSLASH &trans
             >;
