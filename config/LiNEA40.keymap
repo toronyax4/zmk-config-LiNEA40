@@ -202,8 +202,8 @@
             slow-interval-ms = <25>;
             fast-interval-ms = <25>;
             fast-trigger-count = <12>;
-            slow-scale-percent = <11>;
-            fast-scale-percent = <50>;
+            slow-scale-percent = <10>;
+            fast-scale-percent = <45>;
         };
 
         jis_minus_under: jis_minus_under {
