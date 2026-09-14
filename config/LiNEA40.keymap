@@ -387,7 +387,7 @@
             bindings
                 = <&macro_tap &kp LA(SPACE)>
                 , <&macro_tap &kp N>
-                , <&on WIN_RESTORE_PENDING>;
+                , <&tog WIN_RESTORE_PENDING>;
         };
 
         win_window_maximize: win_window_maximize {
@@ -415,7 +415,7 @@
                 , <&macro_wait_time 100>
                 , <&macro_tap &kp X>
                 , <&macro_wait_time 40>
-                , <&off WIN_RESTORE_PENDING>;
+                , <&tog WIN_RESTORE_PENDING>;
         };
 
         mac_ime_toggle: mac_ime_toggle {
