@@ -388,6 +388,16 @@
                 , <&macro_tap &kp N>;
         };
 
+        win_window_restore_maximize: win_window_restore_maximize {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <150>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap &kp LA(TAB)>
+                , <&macro_tap &kp LG(UP_ARROW)>;
+        };
+
         mac_ime_toggle: mac_ime_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -582,7 +592,7 @@
 
         win_nav {
             bindings = <
-&kp LC(KP_PLUS)   &kp HOME        &kp UP_ARROW    &kp PAGE_UP     &kp LG(UP_ARROW)                    &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
+&kp LC(KP_PLUS)   &kp HOME        &kp UP_ARROW    &kp PAGE_UP     &win_window_restore_maximize        &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
 &kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &kp LG(LEFT_ARROW)        &kp LG(RIGHT_ARROW)    &trans    &mkp MB1        &rclk_scroll TB_SCROLL MB2       &trans
 &trans            &kp END         &trans          &kp PAGE_DOWN   &win_window_minimize                   &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans            &trans         &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
