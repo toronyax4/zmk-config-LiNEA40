@@ -22,6 +22,7 @@
 #define AM_OFF 10
 #define WIN_NUM_FUNC 11
 #define WIN_NAV 12
+#define WIN_RESTORE_PENDING 13
 
 //mouse cursor
 
@@ -385,7 +386,8 @@
             tap-ms = <20>;
             bindings
                 = <&macro_tap &kp LA(SPACE)>
-                , <&macro_tap &kp N>;
+                , <&macro_tap &kp N>
+                , <&on WIN_RESTORE_PENDING>;
         };
 
         win_window_maximize: win_window_maximize {
@@ -396,6 +398,24 @@
             bindings
                 = <&macro_tap &kp LA(SPACE)>
                 , <&macro_tap &kp X>;
+        };
+
+        win_window_restore_maximize: win_window_restore_maximize {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp TAB>
+                , <&macro_wait_time 250>
+                , <&macro_release &kp LEFT_ALT>
+                , <&macro_wait_time 500>
+                , <&macro_tap &kp LA(SPACE)>
+                , <&macro_wait_time 100>
+                , <&macro_tap &kp X>
+                , <&macro_wait_time 40>
+                , <&off WIN_RESTORE_PENDING>;
         };
 
         mac_ime_toggle: mac_ime_toggle {
@@ -596,6 +616,17 @@
 &kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &kp LG(LEFT_ARROW)        &kp LG(RIGHT_ARROW)    &trans    &mkp MB1        &rclk_scroll TB_SCROLL MB2       &trans
 &trans            &kp END         &trans          &kp PAGE_DOWN   &win_window_minimize                   &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans            &trans         &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
+            >;
+
+            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
+        };
+
+        win_restore_pending {
+            bindings = <
+&trans  &trans  &trans  &trans  &win_window_restore_maximize       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
