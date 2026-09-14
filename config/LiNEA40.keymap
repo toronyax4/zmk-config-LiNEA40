@@ -400,6 +400,28 @@
                 , <&macro_tap &kp X>;
         };
 
+        win_window_left_snap: win_window_left_snap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_tap &kp LS(LG(DOWN_ARROW))>
+                , <&macro_wait_time 150>
+                , <&macro_tap &kp LG(LEFT_ARROW)>;
+        };
+
+        win_window_right_snap: win_window_right_snap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_tap &kp LS(LG(DOWN_ARROW))>
+                , <&macro_wait_time 150>
+                , <&macro_tap &kp LG(RIGHT_ARROW)>;
+        };
+
         win_window_restore_maximize: win_window_restore_maximize {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -612,7 +634,7 @@
         win_nav {
             bindings = <
 &kp LC(KP_PLUS)   &kp HOME        &kp UP_ARROW    &kp PAGE_UP     &win_window_maximize        &mkp MB4  &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &trans
-&kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &kp LG(LEFT_ARROW)        &kp LG(RIGHT_ARROW)    &trans    &mkp MB1        &rclk_scroll TB_SCROLL MB2       &trans
+&kp LC(KP_MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW &win_window_left_snap     &win_window_right_snap    &trans    &mkp MB1        &rclk_scroll TB_SCROLL MB2       &trans
 &trans            &kp END         &trans          &kp PAGE_DOWN   &win_window_minimize                   &mkp MB5  &kp END   &kp DOWN_ARROW  &kp PAGE_DOWN  &trans
 &trans            &trans         &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
             >;
