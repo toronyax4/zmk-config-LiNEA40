@@ -517,6 +517,16 @@
                 , <&macro_tap &kp X>;
         };
 
+        mac_dictation: mac_dictation {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <80>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_tap &kp GLOBE>
+                , <&macro_tap &kp GLOBE>;
+        };
+
         mac_ime_toggle: mac_ime_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -678,7 +688,7 @@
 
         settings {
             bindings = <
-&kp C_BRI_UP  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &kp LC(SPACE)                      &bt_mac_0  &bt_mac_1   &bt_mac_2  &bt_win_3   &bt_mac_4
+&kp C_BRI_UP  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &mac_dictation                      &bt_mac_0  &bt_mac_1   &bt_mac_2  &bt_win_3   &bt_mac_4
 &kp C_BRI_DN  &kp C_PREV         &kp C_PP    &kp C_NEXT       &kp LG(H)                          &trans     &trans      &trans     &trans      &trans
 &trans        &trans             &trans      &trans           &trans                             &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4
 &trans        &trans             &trans      &trans           &trans       &trans    &trans       &tog AM_OFF  &trans     &trans      &bt BT_CLR
