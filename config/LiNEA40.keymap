@@ -650,7 +650,7 @@
 &trans         &trans    &trans          &trans         &trans       &trans    &trans       &trans      &trans    &trans         &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
+            sensor-bindings = <&mouse_scrl MOVE_LEFT MOVE_RIGHT>;
         };
 
         app_gesture {
@@ -727,7 +727,7 @@
 &trans            &trans         &trans          &trans          &trans      &trans    &trans    &trans        &trans        &trans       &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
+            sensor-bindings = <&mouse_scrl MOVE_LEFT MOVE_RIGHT>;
         };
 
         win_restore_pending {
