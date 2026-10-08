@@ -26,6 +26,7 @@
 #define WIN_APP_GESTURE 14
 #define NAV_HSCROLL 15
 #define WIN_TB_SCROLL 16
+#define MAC_NAV_HSCROLL 17
 
 //mouse cursor
 
@@ -79,6 +80,14 @@
             track-remainders;
         };
 
+        mac_tb_scroll_slow: mac_tb_scroll_slow {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+            track-remainders;
+        };
+
         tb_app_gestures: tb_app_gestures {
             compatible = "zmk,input-processor-directional-gestures";
             #input-processor-cells = <1>;
@@ -122,11 +131,11 @@
     };
 
     mac_scroller {
-        layers = <TB_SCROLL>;
+        layers = <TB_SCROLL MAC_NAV_HSCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
-            <&tb_scroll_slow 1 16>;
+            <&mac_tb_scroll_slow 1 48>;
     };
 
     standard_scroller {
@@ -655,7 +664,7 @@
         nav {
             bindings = <
 &kp LG(EQUAL)   &kp HOME  &kp UP_ARROW    &kp PAGE_UP    &mac_window_fill                         &mkp MB4     &kp HOME  &kp UP_ARROW  &kp PAGE_UP    &trans
-&kp LG(MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mac_window_left       &mac_window_right       &trans    &mkp MB1      &rclk_scroll NAV_HSCROLL MB2       &trans
+&kp LG(MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mac_window_left       &mac_window_right       &trans    &mkp MB1      &rclk_scroll MAC_NAV_HSCROLL MB2       &trans
 &trans             &kp END   &trans          &kp PAGE_DOWN  &kp LG(M)                         &mkp MB5     &kp END   &kp DOWN_ARROW &kp PAGE_DOWN  &trans
 &trans         &trans    &trans          &trans         &trans       &trans    &trans       &trans      &trans    &trans         &trans
             >;
@@ -782,6 +791,17 @@
             >;
 
             sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
+        };
+
+        mac_nav_hscroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&mouse_scrl MOVE_RIGHT MOVE_LEFT>;
         };
     };
 };
