@@ -761,7 +761,7 @@
 &trans  &trans  &trans  &trans  &trans       &trans    &trans       &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_LEFT MOVE_RIGHT>;
+            sensor-bindings = <&mouse_scrl MOVE_RIGHT MOVE_LEFT>;
         };
     };
 };
