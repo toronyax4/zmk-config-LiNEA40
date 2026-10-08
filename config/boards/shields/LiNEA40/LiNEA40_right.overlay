@@ -59,7 +59,8 @@
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //MOT-D6
         // automouse-layer = <8>;
         snipe-layers = <6>;
-        scroll-layers = <7>;
+        // Scroll conversion is handled by keymap input processors.
+        scroll-layers = <>;
         //scroll-layers = <4 5 6>;
     };
 };
