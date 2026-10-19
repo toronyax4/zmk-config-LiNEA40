@@ -241,6 +241,7 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
             tap-ms = <20>;
+            detent-trigger-count = <2>;
             direction-confirm-ms = <300>;
             slow-interval-ms = <25>;
             fast-interval-ms = <25>;
