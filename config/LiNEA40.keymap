@@ -713,7 +713,7 @@
 &trans        &trans             &trans      &trans           &trans       &trans    &trans       &tog AM_OFF  &trans     &trans      &bt BT_CLR
             >;
 
-            sensor-bindings = <&mouse_scrl MOVE_UP MOVE_DOWN>;
+            sensor-bindings = <&re_kp N1 N2>;
         };
 
         am_off {
