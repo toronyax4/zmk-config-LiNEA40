@@ -155,11 +155,6 @@
     combos {
         compatible = "zmk,combos";
 
-        ZenkakuHankaku {
-            bindings = <&kp GRAVE>;
-            key-positions = <11 12>;
-        };
-
         DeleteKey {
             bindings = <&kp DEL>;
             key-positions = <7 8>;
@@ -222,14 +217,14 @@
 
         MacThumbImeCombo {
             bindings = <&mac_ime_toggle>;
-            key-positions = <35 36>;
+            key-positions = <34 37>;
             layers = <MAC_BASE AM_OFF>;
             timeout-ms = <50>;
         };
 
         WinThumbImeCombo {
             bindings = <&win_ime_toggle>;
-            key-positions = <35 36>;
+            key-positions = <34 37>;
             layers = <WIN_BASE>;
             timeout-ms = <50>;
         };
