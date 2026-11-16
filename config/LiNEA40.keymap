@@ -519,8 +519,7 @@
             wait-ms = <40>;
             tap-ms = <20>;
             bindings
-                = <&macro_tap &kp LA(SPACE)>
-                , <&macro_tap &kp X>;
+                = <&macro_tap &kp LC(LA(LS(F13)))>;
         };
 
         win_window_left_snap: win_window_left_snap {
