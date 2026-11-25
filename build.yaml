@@ -1,19 +1,6 @@
-# This file generates the GitHub Actions matrix.
-# For simple board + shield combinations, add them to the top level board and
-# shield arrays, for more control, add individual board + shield combinations
-# to the `include` property.
-# include:
-#   - board: nice_nano_v2
-#     shield: corne_left
-#     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-#     artifact-name: corne_central
-
 include:
-  - board: seeeduino_xiao_ble
-    shield: LiNEA40_left rgbled_adapter
   - board: seeeduino_xiao_ble
     shield: LiNEA40_right rgbled_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
+    artifact-name: LiNEA40_right-usb-probe

@@ -69,3 +69,11 @@
     status = "okay";
     device = <&trackball>;
 };
+
+&zephyr_udc0 {
+    linea40_probe_uart: linea40_probe_uart {
+        compatible = "zephyr,cdc-acm-uart";
+        tx-fifo-size = <128>;
+        rx-fifo-size = <128>;
+    };
+};
